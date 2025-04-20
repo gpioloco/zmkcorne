@@ -12,17 +12,6 @@
 #include <dt-bindings/zmk/pointing.h>
 
 / {
-    unicode {
-        compatible = "zmk,unicode";
-        ae = <0x00E4>;   // ä
-        oe = <0x00F6>;   // ö
-        ue = <0x00FC>;   // ü
-        Ae = <0x00C4>;   // Ä
-        Oe = <0x00D6>;   // Ö
-        Ue = <0x00DC>;   // Ü
-        sz = <0x00DF>;   // ß
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -49,10 +38,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB  &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6              &kp N7              &kp N8              &kp N9     &kp N0  &kp DELETE
-&trans   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT  &trans  &trans
-&trans   &trans        &trans        &trans        &trans        &trans          &unicode_single ae  &unicode_single ue  &unicode_single oe  &trans     &trans  &trans
-                                     &trans        &trans        &trans          &trans              &trans              &trans
+&kp TAB  &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6    &kp N7    &kp N8  &kp N9     &kp N0  &kp DELETE
+&trans   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
+&trans   &trans        &trans        &trans        &trans        &trans          &trans    &trans    &trans  &trans     &trans  &trans
+                                     &trans        &trans        &trans          &trans    &trans    &trans
             >;
         };
 
